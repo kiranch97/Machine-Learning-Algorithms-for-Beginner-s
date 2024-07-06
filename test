@@ -1,1 +1,28 @@
-gsg
+“Naive Bayes classifiers” are a family of simple “probabilistic classifiers” that use the Bayes theorem and strong (naive) independence assumptions between the features. It’s particularly used in text classification.
+
+It calculates the probability of each class and the conditional probability of each class given each input value. These probabilities are then used to classify a new value based on the highest probability.
+Evaluation Metrics:
+
+    Accuracy: Measures the overall correctness of the model.
+    Precision, Recall, and F1 Score: Essential in imbalanced cases of class distribution.
+
+Applying with Sci-kit Learn
+
+We’ll use the Digits dataset, which involves classifying images of handwritten digits (0–9). This is a multi-class classification problem. We’ll train the Naive Bayes model, predict digit classes, and evaluate using classification metrics. Here are the steps we’ll follow.
+
+    Load the Digits Dataset:
+
+    The Digits dataset consists of 8x8 pixel images of handwritten digits (from 0 to 9). Each image is represented as a feature vector of 64 values (8x8 pixels), each representing the grayscale intensity of a pixel.
+
+2. Split the Dataset:
+
+    Like previous examples, the dataset is divided into training and testing sets. We use 80% of the data for training and 20% for testing. This helps in training the model on a large portion of the data and then evaluating its performance on a separate set that it hasn’t seen before.
+
+3. Create and Train the Naive Bayes Model:
+
+    A Gaussian Naive Bayes classifier is created. This variant of Naive Bayes assumes that the continuous values associated with each feature are distributed according to a Gaussian (normal) distribution.
+    The model is then trained (fitted) on the training data. It learns to associate the input features (pixel values) with the target values (digit classes).
+
+4. Predict and Evaluate:
+
+    After training, the model is used to predict the class labels of the test data.
